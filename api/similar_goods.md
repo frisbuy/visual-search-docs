@@ -8,7 +8,7 @@
 Выполняет подбор товаров, похожих на указанный
 
 
-- url: https://api.frisbuy.com/api/visual_search/v1/similar-goods
+- url: https://api.frisbuy.com/api/visual-search/v1/similar-goods
 - метод: GET
 - параметры передаются в query
   - `api_token`: токен пользователя (string, 32 байта) - выдаётся аккаунт-менеджером, определяет, среди каких товаров будет происходи поиск (т.е. какой товарный фид будет использован)

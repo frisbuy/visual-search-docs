@@ -23,7 +23,7 @@
 
 Используется для прямой загрузки файла с изображением
 
-- url: https://api.frisbuy.com/api/visual_search/v1/upload
+- url: https://api.frisbuy.com/api/visual-search/v1/upload
 - метод: POST
 - enctype: multipart/form-data
 - параметры передаются либо в POST, либо в query; можно сочетать оба способа, и query имеет приоритет над POST
@@ -35,7 +35,7 @@
 
 **Пример использования**
 
-    curl -F 'image=@Kozhanoe-ispolnenie.jpg' 'https://api.frisbuy.com/api/visual_search/v1/upload?api_token=kpX2xkqVWUkH&gender=female'
+    curl -F 'image=@Kozhanoe-ispolnenie.jpg' 'https://api.frisbuy.com/api/visual-search/v1/upload?api_token=kpX2xkqVWUkH&gender=female'
 
 
 ## Метод HTTP Get
@@ -44,7 +44,7 @@
 
 Используется для скачивания файлов изображений по прямой HTTP ссылке; также поддерживает ссылки на посты в инстаграм.
 
-- url: https://api.frisbuy.com/api/visual_search/v1.2.0/http-get
+- url: https://api.frisbuy.com/api/visual-search/v1.2.0/http-get
 - метод: POST
 - enctype: multipart/form-data
 - параметры передаются либо в POST, либо в query; можно сочетать оба способа, и query имеет приоритет над POST
@@ -58,11 +58,11 @@
 
 Прямая ссылка на файл:
 
-    curl 'https://api.frisbuy.com/api/visual_search/v1/http-get?api_token=kpX2xkqVWUkH&url=https%3A%2F%2Fscontent-frt3-1.cdninstagram.com%2Fvp%2F0d3ee05020651bfa20b0feb4718d7883%2F5D0BB461%2Ft51.2885-15%2Fe35%2F51962016_480073726094227_1289207511322387173_n.jpg%3F_nc_ht%3Dscontent-frt3-1.cdninstagram.com&gender=female'
+    curl 'https://api.frisbuy.com/api/visual-search/v1/http-get?api_token=kpX2xkqVWUkH&url=https%3A%2F%2Fscontent-frt3-1.cdninstagram.com%2Fvp%2F0d3ee05020651bfa20b0feb4718d7883%2F5D0BB461%2Ft51.2885-15%2Fe35%2F51962016_480073726094227_1289207511322387173_n.jpg%3F_nc_ht%3Dscontent-frt3-1.cdninstagram.com&gender=female'
 
 Пост из Instagram:
 
-    curl 'https://api.frisbuy.com/api/visual_search/v1/http-get?api_token=kpX2xkqVWUkH&url=https%3A%2F%2Fwww.instagram.com%2Fp%2FBuYcno5FV74%2F&gender=female'
+    curl 'https://api.frisbuy.com/api/visual-search/v1/http-get?api_token=kpX2xkqVWUkH&url=https%3A%2F%2Fwww.instagram.com%2Fp%2FBuYcno5FV74%2F&gender=female'
 
 
 # Двухфазный поиск
@@ -71,7 +71,7 @@
 
 При этом, в первой фазе (загрузка изображения) достаточно будет передать только токен апи, само изображение, и параметр `upload_only`:
 
-    curl 'https://api.frisbuy.com/api/visual_search/v1/http-get?api_token=kpX2xkqVWUkH&url=https%3A%2F%2Fwww.instagram.com%2Fp%2FBuYcno5FV74%2F&upload_only=1'
+    curl 'https://api.frisbuy.com/api/visual-search/v1/http-get?api_token=kpX2xkqVWUkH&url=https%3A%2F%2Fwww.instagram.com%2Fp%2FBuYcno5FV74%2F&upload_only=1'
 
 Вернётся сокращённый ответ, содержащий только ссылки на изображения, и ID запроса, который понадобится для второй фазы:
 
@@ -92,7 +92,7 @@
 
 Для второй фазы (поиск товаров) изображение передавать уже не нужно, достаточно указать только request_id, и дополнительные параметры поиска (такие, как gender):
 
-    curl 'https://api.frisbuy.com/api/visual_search/v1/http-get?api_token=kpX2xkqVWUkH&request_id=5c76744bb489c5027d48c673&gender=female'
+    curl 'https://api.frisbuy.com/api/visual-search/v1/http-get?api_token=kpX2xkqVWUkH&request_id=5c76744bb489c5027d48c673&gender=female'
 # Формат ответа
 
 В теле ответа приходит JSON следующей структуры: 
